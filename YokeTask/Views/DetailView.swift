@@ -20,6 +20,7 @@ struct DetailView: View {
                 //Title
                 VStack{
                     HStack{
+                        // X Button
                         Button(action: {
                             //Dismiss the sheet when X is pressed
                             self.presentationMode.wrappedValue.dismiss()
@@ -28,12 +29,14 @@ struct DetailView: View {
                             Text("X").foregroundColor(Color.white)
                         }
                         Spacer()
-                        
+                        // Star's name at the top
                         Text(star.name).font(.footnote).bold().lineLimit(1).padding(5).foregroundColor(Color.white)
                         Spacer()
                         
                     }
                     Spacer()
+                    
+                    // Join Button
                     Button(action: {
                         print("Join Button tapped!")
                     }) {

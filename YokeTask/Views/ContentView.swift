@@ -22,6 +22,7 @@ struct ContentView: View {
     
     // private method to handle scrollview (horizontal for both live and featured)
     fileprivate func privateScrollMethod(live: Bool) -> ScrollView<HStack<ForEach<[Star], String, CardView>>> {
+        // for live players
         if (live){
             return ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -31,6 +32,8 @@ struct ContentView: View {
                 }
             }
         }
+            
+        // for featured players
         else{
             return ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -47,7 +50,7 @@ struct ContentView: View {
     //Body
     var body: some View {
         TabView{
-                NavigationView {
+               NavigationView {
                     List{
                         if (network.live.count > 0){
                             Text("LIVE NOW").fontWeight(.heavy)
