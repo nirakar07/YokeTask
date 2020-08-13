@@ -13,10 +13,11 @@ struct ContentView: View {
     @ObservedObject var network = NetworkManager();
     @State var oneOnline: Bool = false;
     
-    //Navbar settings
+    //Navbar and Tab bar settings
     init() {
-        UINavigationBar.appearance().backgroundColor = UIColor(red: 19.0/255.0, green: 20.0/255.0, blue: 71.0/255.0, alpha: 1)
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().barTintColor = UIColor(red: 19.0/255.0, green: 20.0/255.0, blue: 71.0/255.0, alpha: 1)
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
+        UITabBar.appearance().barTintColor =  UIColor(red: 19.0/255.0, green: 20.0/255.0, blue: 71.0/255.0, alpha: 1)
     }
     
     // private method to handle scrollview (horizontal for both live and featured)
@@ -45,24 +46,43 @@ struct ContentView: View {
     
     //Body
     var body: some View {
-        NavigationView {
-            List{
-                if (network.live.count > 0){
-                    Text("LIVE NOW").fontWeight(.heavy)
-                    privateScrollMethod(live: true)
+        TabView{
+                NavigationView {
+                    List{
+                        if (network.live.count > 0){
+                            Text("LIVE NOW").fontWeight(.heavy)
+                            privateScrollMethod(live: true)
+                        }
+                        if (network.featured.count > 0){
+                            Text("FEATURED").fontWeight(.heavy)
+                            privateScrollMethod(live: false)
+                        }
+                        
+                    }.navigationBarTitle("YOKE", displayMode: .inline)
+                    
+                }.onAppear(){
+                    self.network.fetchData();
+                    UITableView.appearance().separatorStyle = .none;
                 }
-                if (network.featured.count > 0){
-                    Text("FEATURED").fontWeight(.heavy)
-                    privateScrollMethod(live: false)
-                }
-                
-            }.navigationBarTitle("YOKE")
+                .tabItem{
+                    Image(systemName: "star")
+                    Text("Home")
+            }.tag(0)
+            DiscoverView().tabItem{
+                Image(systemName: "magnifyingglass")
+                Text("Discover")
+            }.tag(1)
             
-        }.onAppear(){
-            self.network.fetchData();
-            UITableView.appearance().separatorStyle = .none;
-        }
-        
+            DiscoverView().tabItem{
+                Image(systemName: "bolt")
+                Text("Challenges")
+            }.tag(2)
+            DiscoverView().tabItem{
+                Image(systemName: "person.circle")
+                Text("Profile")
+            }.tag(3)
+                
+        }.foregroundColor(Color(red: 19.0/255.0, green: 20.0/255.0, blue: 71.0/255.0, opacity: 1))
     }
 }
 

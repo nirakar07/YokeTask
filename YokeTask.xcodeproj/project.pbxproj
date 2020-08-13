@@ -18,6 +18,7 @@
 		C3F10D4E24E466340075158B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F10D4C24E466340075158B /* Card.swift */; };
 		C3F10D5024E4671F0075158B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F10D4F24E4671F0075158B /* CardView.swift */; };
 		C3F10D5324E4B4360075158B /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F10D5224E4B4360075158B /* DetailView.swift */; };
+		C3F10D5524E4DEF60075158B /* DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F10D5424E4DEF60075158B /* DiscoverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C3F10D4C24E466340075158B /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C3F10D4F24E4671F0075158B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		C3F10D5224E4B4360075158B /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		C3F10D5424E4DEF60075158B /* DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C3F10D3924E465FB0075158B /* ContentView.swift */,
 				C3F10D4F24E4671F0075158B /* CardView.swift */,
 				C3F10D5224E4B4360075158B /* DetailView.swift */,
+				C3F10D5424E4DEF60075158B /* DiscoverView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				C3F10D3324E465FB0075158B /* AppDelegate.swift in Sources */,
 				C3F10D4E24E466340075158B /* Card.swift in Sources */,
 				C3F10D3824E465FB0075158B /* YokeTask.xcdatamodeld in Sources */,
+				C3F10D5524E4DEF60075158B /* DiscoverView.swift in Sources */,
 				C3F10D4D24E466340075158B /* NetworkManager.swift in Sources */,
 				C3F10D3A24E465FB0075158B /* ContentView.swift in Sources */,
 				C3F10D3524E465FB0075158B /* SceneDelegate.swift in Sources */,

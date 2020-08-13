@@ -25,9 +25,8 @@ struct DetailView: View {
                             self.presentationMode.wrappedValue.dismiss()
                             
                         }) {
-                            Text("X").padding(.horizontal, 3).background(Color.orange).cornerRadius(6)
-                        }.foregroundColor(Color.white)
-                        
+                            Text("X").foregroundColor(Color.white)
+                        }
                         Spacer()
                         
                         Text(star.name).font(.footnote).bold().lineLimit(1).padding(5).foregroundColor(Color.white)
