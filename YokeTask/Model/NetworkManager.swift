@@ -16,6 +16,8 @@ class NetworkManager: ObservableObject{
         // function to fetch data
         func fetchData() {
             // URL Session & Task
+            live = [];
+            featured = [];
             if let url = URL(string: "https://us-central1-yoke-gaming.cloudfunctions.net/testCall") {
                 let session = URLSession(configuration: .default)
                 let task = session.dataTask(with: url) { (data, response, error) in

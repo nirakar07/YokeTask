@@ -16,7 +16,7 @@ struct DetailView: View {
         VStack{
             ZStack{
                 //Image
-                Image("player").resizable().aspectRatio(contentMode: .fit)
+                Image("player").resizable().aspectRatio(contentMode: .fit).edgesIgnoringSafeArea(.all)
                 //Title
                 VStack{
                     HStack{
