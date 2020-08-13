@@ -16,7 +16,7 @@ struct DetailView: View {
         VStack{
             ZStack{
                 //Image
-                Image("player").resizable().aspectRatio(0.60, contentMode: .fit)
+                Image("player").resizable().aspectRatio(contentMode: .fit)
                 //Title
                 VStack{
                     HStack{
@@ -26,7 +26,7 @@ struct DetailView: View {
                             self.presentationMode.wrappedValue.dismiss()
                             
                         }) {
-                            Text("X").foregroundColor(Color.white)
+                            Text("X").foregroundColor(Color.white).background(Color.orange)
                         }
                         Spacer()
                         // Star's name at the top
