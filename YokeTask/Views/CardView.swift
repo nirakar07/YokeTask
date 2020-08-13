@@ -12,7 +12,6 @@ struct CardView: View {
     let star: Star
     @State var showingDetail = false
     var body: some View {
-//        NavigationLink(destination: DetailView(star: star)){
             ZStack (alignment: .top){
                 
                 //Image
@@ -37,8 +36,6 @@ struct CardView: View {
             }.onTapGesture {
                 self.showingDetail.toggle()
             }
-            
-        //}
     }
 }
 
